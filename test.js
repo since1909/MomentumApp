@@ -46,15 +46,31 @@ sayHello(player.name);
 
 // 요즘은 안 쓰는 프롬프트 > 브라우저 멈춤
 // type casting : string -> Integer
-const age = parseInt(prompt("How old are you?"));
-
+//const age = parseInt(prompt("How old are you?"));
+const age = 3;
 //console.log(isNaN(age));
 
 if(isNaN(age)) {
-    alert("Please write a number!");
+    console.log("Please write a number!");
 } else if (age < 18 && age >= 50) {
-    alert("You are too young");
+    console.log("You are too young");
 } else {
-    alert("Thanks");
+    console.log("Thanks");
 }
 
+
+//html 항목 가져오기
+//이 강의에서는 querySelector 많이 사용함
+
+const h1 = document.querySelector(".hello h1");
+
+h1.innerText = "Hello!";
+
+// event listener
+
+function handleTitleClick() {
+    h1.style.color = "blue";
+    console.log("title was clicked");
+}
+
+h1.addEventListener("click", handleTitleClick);
