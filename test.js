@@ -43,3 +43,18 @@ function sayHello(name){
 
 sayHello(player.name);
 
+
+// 요즘은 안 쓰는 프롬프트 > 브라우저 멈춤
+// type casting : string -> Integer
+const age = parseInt(prompt("How old are you?"));
+
+//console.log(isNaN(age));
+
+if(isNaN(age)) {
+    alert("Please write a number!");
+} else if (age < 18 && age >= 50) {
+    alert("You are too young");
+} else {
+    alert("Thanks");
+}
+
