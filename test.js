@@ -64,47 +64,55 @@ if(isNaN(age)) {
 
 const h1 = document.querySelector(".hello h1");
 
-h1.innerText = "Hello!";
+h1.innerText = "Click me!";
 
 console.dir(h1);
 
 // event listener
 
 function handleTitleClick() {
-    h1.style.color = "blue";
-    console.log("title was clicked");
-}
+    const currentColor = h1.style.color;
+    let newColor;
 
-function handleMouseEnter(){
-    h1.innerText = "Mouse is here!";
-}
-
-function handleMouseLeave(){
-    h1.innerText = "Mouse is gone!"
-}
-
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy() {
-    alert("copier!!");
-}
-
-function handleWindowOffline() {
-    alert("SOS no WIFI");
-}
-
-function handleWindowOnline() {
-    alert("All GOOD");
+    if(currentColor === "blue") {
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
 }
 
 h1.addEventListener("click", handleTitleClick);
-//h1.onclick = handleTitleClick;
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
 
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("online", handleWindowOnline);
+// function handleMouseEnter(){
+//     h1.innerText = "Mouse is here!";
+// }
+
+// function handleMouseLeave(){
+//     h1.innerText = "Mouse is gone!"
+// }
+
+// function handleWindowResize() {
+//     document.body.style.backgroundColor = "tomato";
+// }
+
+// function handleWindowCopy() {
+//     alert("copier!!");
+// }
+
+// function handleWindowOffline() {
+//     alert("SOS no WIFI");
+// }
+
+// function handleWindowOnline() {
+//     alert("All GOOD");
+// }
+
+//h1.onclick = handleTitleClick;
+// h1.addEventListener("mouseenter", handleMouseEnter);
+// h1.addEventListener("mouseleave", handleMouseLeave);
+
+// window.addEventListener("resize", handleWindowResize);
+// window.addEventListener("copy", handleWindowCopy);
+// window.addEventListener("offline", handleWindowOffline);
+// window.addEventListener("online", handleWindowOnline);
