@@ -70,16 +70,20 @@ console.dir(h1);
 
 // event listener
 
-function handleTitleClick() {
-    const currentColor = h1.style.color;
-    let newColor;
+// function handleTitleClick() {
+//     const currentColor = h1.style.color;
+//     let newColor;
 
-    if(currentColor === "blue") {
-        newColor = "tomato";
-    } else {
-        newColor = "blue";
-    }
-    h1.style.color = newColor;
+//     if(currentColor === "blue") {
+//         newColor = "tomato";
+//     } else {
+//         newColor = "blue";
+//     }
+//     h1.style.color = newColor;
+// }
+
+function handleTitleClick() {
+    h1.classList.toggle("active");
 }
 
 h1.addEventListener("click", handleTitleClick);
